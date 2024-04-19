@@ -1,1 +1,2 @@
-# News_App
+# CurrentClick News Application
+
