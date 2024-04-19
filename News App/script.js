@@ -12,10 +12,9 @@ const options = [
   "technology",
 ];
 
-//100 requests per day
 let requestURL;
 
-//Create cards from data
+//Cards from data
 const generateUI = (articles) => {
   for (let item of articles) {
     let card = document.createElement("div");
@@ -36,7 +35,7 @@ const generateUI = (articles) => {
   }
 };
 
-//News API Call
+// News API Call
 const getNews = async () => {
   container.innerHTML = "";
   let response = await fetch(requestURL);
@@ -48,7 +47,7 @@ const getNews = async () => {
   generateUI(data.articles);
 };
 
-//Category Selection
+// Category Selection
 const selectCategory = (e, category) => {
   let options = document.querySelectorAll(".option");
   options.forEach((element) => {
@@ -59,7 +58,7 @@ const selectCategory = (e, category) => {
   getNews();
 };
 
-//Options Buttons
+// Options Buttons
 const createOptions = () => {
   for (let i of options) {
     optionsContainer.innerHTML += `<button class="option ${
